@@ -1,183 +1,183 @@
-categories,count
-Jeux de plateau,5081
-Jeux de cartes,3038
-,2198
-Guerre,1564
-Autres,599
-Affrontement,535
-Jeu de carte à collectionner,436
-Jeux de connaissances,433
-"Hasard (Dé, Cartes, ...)",427
-Jeux de pions,416
-Casse-tête,380
-Jeux de figurines,377
-Placement,318
-Déplacement,306
-Combinaison,302
-Ambiance,297
-Jeu de logique,285
-Médiéval-fantastique,273
-Dés,261
-Jeux de dés,256
-Exploration,241
-Coopération,239
-Gestion,229
-Gestion de main,229
-Animaux,224
-Jeux de rôles,221
-Bluff,209
-Fantastique,202
-Jeux de figurines à collectionner,189
-Science fiction,180
-Jeux de lettres,177
-Course,174
-Prise de risque,172
-Collection / famille,169
-Commerce,169
-Majorité,168
-Rapidité,164
-Médiéval,163
-Historique,156
-"Contes, Mythes & Légendes",151
-Plateau modulaire,150
-Blocage,150
-Deck building,150
-Casual,149
-Pioche,145
-Choix simultanés,144
-Déduction,138
-Conquête,137
-Simulation,136
-Amateur,136
-Observation,134
-Placement d'ouvrier,131
-Mémoire,128
-Tuile,126
-Humour,121
-Programmation,115
-Antiquité,114
-Dextérité/Adresse,110
-Abstrait,109
-Construction,108
-Rôle,104
-Diplomatie,103
-Monstre,103
-Connexions,96
-Narration,95
-Ville,95
-Points d'action,92
-Elimination,92
-Horreur,90
-Passionné,88
-Geek,87
-Asie,86
-Divers,86
-Enquêtes et Policiers,85
-Objectif secret,83
-Card-driven,83
-Parcours,83
-Créativité,79
-Capture,79
-Maritime,79
-Locomotion & voyage,77
-Guessing,74
-Enchères japonaises,73
-Récolte,72
-Pirate,68
-Colonisation,68
-équipe,67
-Stop ou encore,66
-Semi-coopération,66
-Lettres / mots,64
-TV & Cinéma,63
-Enigme,62
-Zombies,61
-Rôle secret,58
-Logique,55
-Draft,52
-Politique,50
-Connaissances,50
-Trahison,47
-Les îles,46
-Far-west,42
-Transport de marchandise,41
-Bande dessinée,41
-Question,40
-Empilement,40
-Renaissance,37
-Défausse,37
-Sport,36
-Art,35
-Catastrophe,33
-Pari,33
-Immobilier,32
-Alignement,32
-Rails,30
-Chiffres,30
-Fruits & légumes,30
-Devinette,29
-Préhistorique,29
-SteamPunk,27
-Bourse & finances,27
-Religion,26
-Egypte,26
-Cuisine,25
-Levées,25
-Lettres & chiffres,25
-Livre dont vous êtes le héros,25
-Prospection minière,24
-Dessin,24
-Rangement,24
-Labyrinthe,24
-Echange - troc,24
-Fantôme,23
-Taquin,20
-Samurai,20
-Ecologie,20
-Desert,18
-Lovecraft,18
-Enchères à poing fermé,17
-Musique & Chanson,17
-Halloween,16
-Loups-garous,16
-Hospitalier,15
-Polaire,15
-Aviation,14
-Afrique,14
-Enchères cachées,13
-Mime,13
-Espion,12
-Cyberpunk,11
-Vote,11
-Vampire,9
-Sorcière,9
-Avant-vente,9
-Robots,9
-Toucher,9
-Japon,8
-Semaille,8
-Cochon,7
-Astronomie et Espace,7
-Duplicate,7
-Équilibre,6
-Enchères a un tour,6
-Cirque,6
-Flore,6
-Vikings,6
-Volcan,5
-Chifoumi,5
-Chant & Danse,4
-Jeu en ligne,4
-Cambriolage,3
-Enchères anglaises,3
-Super Héros,3
-Parc d'Attraction,3
-Erotique,3
-Cyclisme,2
-Jeu sans investissement,2
-Aventures dans la jungle,2
-Puzzle,1
-Chat,1
-Vêtements,1
-Jeux à gratter,1
-Archive,1
+categories,count,mean_note
+Jeux de plateau,5081,4.3925506790001965
+Jeux de cartes,3038,4.119198240866035
+,2198,4.592715581105908
+Guerre,1564,6.786947368421053
+Autres,599,4.507145242070117
+Affrontement,535,6.666971962616822
+Jeu de carte à collectionner,436,3.025619266055046
+Jeux de connaissances,433,2.6173672055427257
+"Hasard (Dé, Cartes, ...)",427,6.753231850117096
+Jeux de pions,416,4.4025961538461535
+Casse-tête,380,5.057052631578947
+Jeux de figurines,377,4.428794326241135
+Placement,318,7.300251141552512
+Déplacement,306,6.6728104575163405
+Combinaison,302,6.935993377483444
+Ambiance,297,6.598720538720539
+Jeu de logique,285,4.308140350877194
+Médiéval-fantastique,273,7.096520146520146
+Dés,261,6.981992337164752
+Jeux de dés,256,4.253984375
+Exploration,241,7.145906976744185
+Coopération,239,7.177615062761507
+Gestion,229,7.364541284403669
+Gestion de main,229,7.071397379912664
+Animaux,224,6.359955357142858
+Jeux de rôles,221,4.246923076923077
+Bluff,209,6.781004784688995
+Fantastique,202,6.642128712871287
+Jeux de figurines à collectionner,189,4.788518518518519
+Science fiction,180,7.1075
+Jeux de lettres,177,3.250677966101695
+Course,174,6.821986754966888
+Prise de risque,172,6.885465116279071
+Collection / famille,169,6.646568047337278
+Commerce,169,7.377083333333333
+Majorité,168,7.68327380952381
+Rapidité,164,6.387621951219511
+Médiéval,163,7.183458823529412
+Historique,156,6.029230769230769
+"Contes, Mythes & Légendes",151,7.096026490066225
+Plateau modulaire,150,7.014799999999998
+Blocage,150,7.092133333333333
+Deck building,150,7.448733333333333
+Casual,149,5.548791946308724
+Pioche,145,6.8998620689655175
+Choix simultanés,144,7.324999999999999
+Déduction,138,6.674710144927536
+Conquête,137,7.2749635036496345
+Simulation,136,6.278676470588236
+Amateur,136,3.8019852941176464
+Observation,134,6.060223880597015
+Placement d'ouvrier,131,7.658396946564886
+Mémoire,128,6.460156250000001
+Tuile,126,7.17579365079365
+Humour,121,6.53702479338843
+Programmation,115,7.264608695652174
+Antiquité,114,7.149035087719298
+Dextérité/Adresse,110,6.312
+Abstrait,109,5.797064220183486
+Construction,108,7.461759259259259
+Rôle,104,6.5904430379746834
+Diplomatie,103,7.115048543689319
+Monstre,103,7.070388349514562
+Connexions,96,6.860833333333335
+Narration,95,7.248842105263156
+Ville,95,7.099052631578947
+Points d'action,92,7.101521739130435
+Elimination,92,6.203152173913042
+Horreur,90,6.656555555555556
+Passionné,88,3.0029545454545454
+Geek,87,4.010804597701148
+Asie,86,7.240697674418604
+Divers,86,6.055116279069766
+Enquêtes et Policiers,85,6.55858823529412
+Objectif secret,83,6.920361445783132
+Card-driven,83,6.813253012048194
+Parcours,83,6.204457831325302
+Créativité,79,6.758354430379745
+Capture,79,6.419113924050633
+Maritime,79,6.9116455696202515
+Locomotion & voyage,77,6.741948051948052
+Guessing,74,7.241351351351351
+Enchères japonaises,73,0.0
+Récolte,72,7.439583333333333
+Pirate,68,7.04779411764706
+Colonisation,68,7.592647058823529
+équipe,67,7.128358208955224
+Stop ou encore,66,7.007727272727272
+Semi-coopération,66,6.539696969696969
+Lettres / mots,64,6.219374999999999
+TV & Cinéma,63,6.4766666666666675
+Enigme,62,6.339354838709679
+Zombies,61,6.944426229508196
+Rôle secret,58,7.16948275862069
+Logique,55,6.529454545454547
+Draft,52,7.615192307692307
+Politique,50,7.4316
+Connaissances,50,5.251600000000001
+Trahison,47,6.989148936170213
+Les îles,46,7.68804347826087
+Far-west,42,7.340238095238094
+Transport de marchandise,41,7.682682926829267
+Bande dessinée,41,6.626829268292684
+Question,40,5.88925
+Empilement,40,6.806749999999999
+Renaissance,37,7.751891891891893
+Défausse,37,6.772702702702704
+Sport,36,6.780555555555555
+Art,35,6.8985714285714295
+Catastrophe,33,6.696969696969697
+Pari,33,7.298787878787879
+Immobilier,32,6.9903125
+Alignement,32,6.094062500000001
+Rails,30,7.497666666666666
+Chiffres,30,6.075666666666667
+Fruits & légumes,30,6.6963333333333335
+Devinette,29,6.287586206896552
+Préhistorique,29,6.983103448275862
+SteamPunk,27,6.325185185185187
+Bourse & finances,27,7.2185185185185174
+Religion,26,7.040384615384615
+Egypte,26,7.315384615384615
+Cuisine,25,5.9264
+Levées,25,7.006800000000001
+Lettres & chiffres,25,5.683599999999999
+Livre dont vous êtes le héros,25,3.134
+Prospection minière,24,6.7825000000000015
+Dessin,24,6.688333333333333
+Rangement,24,6.479166666666667
+Labyrinthe,24,6.2683333333333335
+Echange - troc,24,7.110416666666666
+Fantôme,23,7.318695652173912
+Taquin,20,6.840999999999999
+Samurai,20,5.739
+Ecologie,20,5.7090000000000005
+Desert,18,6.987222222222222
+Lovecraft,18,4.805555555555555
+Enchères à poing fermé,17,7.389411764705883
+Musique & Chanson,17,4.32235294117647
+Halloween,16,5.54125
+Loups-garous,16,7.193125
+Hospitalier,15,6.580666666666667
+Polaire,15,7.454666666666667
+Aviation,14,7.031428571428571
+Afrique,14,6.957857142857143
+Enchères cachées,13,7.407692307692306
+Mime,13,6.866923076923077
+Espion,12,6.699166666666668
+Cyberpunk,11,7.143636363636364
+Vote,11,6.561818181818182
+Vampire,9,7.024444444444445
+Sorcière,9,7.398888888888889
+Avant-vente,9,6.872222222222222
+Robots,9,7.4399999999999995
+Toucher,9,7.877777777777778
+Japon,8,7.358750000000001
+Semaille,8,6.16375
+Cochon,7,8.165714285714284
+Astronomie et Espace,7,7.844285714285713
+Duplicate,7,4.2057142857142855
+Équilibre,6,4.721666666666667
+Enchères a un tour,6,8.673333333333334
+Cirque,6,4.84
+Flore,6,7.151666666666666
+Vikings,6,8.24
+Volcan,5,8.605999999999998
+Chifoumi,5,3.066
+Chant & Danse,4,3.56
+Jeu en ligne,4,2.5
+Cambriolage,3,4.653333333333333
+Enchères anglaises,3,6.506666666666667
+Super Héros,3,6.859999999999999
+Parc d'Attraction,3,7.66
+Erotique,3,6.7700000000000005
+Cyclisme,2,7.085
+Jeu sans investissement,2,7.6450000000000005
+Aventures dans la jungle,2,8.125
+Puzzle,1,7.28
+Chat,1,6.93
+Vêtements,1,9.0
+Jeux à gratter,1,4.0
+Archive,1,7.05
