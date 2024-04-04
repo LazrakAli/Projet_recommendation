@@ -1,0 +1,100 @@
+User Based :
+Evaluating KNNBasic...
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+MAE for ratings between 4 and 5: 2.828
+MAE for ratings between 5 and 6: 1.526
+MAE for ratings between 6 and 7: 1.158
+MAE for ratings between 7 and 8: 0.676
+MAE for ratings between 8 and 9: 0.734
+MAE for ratings between 9 and 10: 1.767
+MAE for ratings between 10 and 11: 2.038
+MAE : 1.3704766150519705
+
+Evaluating KNNWithMeans...
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+MAE for ratings between 4 and 5: 2.430
+MAE for ratings between 5 and 6: 1.286
+MAE for ratings between 6 and 7: 1.052
+MAE for ratings between 7 and 8: 0.742
+MAE for ratings between 8 and 9: 0.782
+MAE for ratings between 9 and 10: 1.482
+MAE for ratings between 10 and 11: 1.700
+MAE : 1.2430692576635043
+
+Evaluating KNNWithZScore...
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+MAE for ratings between 4 and 5: 2.408
+MAE for ratings between 5 and 6: 1.286
+MAE for ratings between 6 and 7: 1.053
+MAE for ratings between 7 and 8: 0.747
+MAE for ratings between 8 and 9: 0.786
+MAE for ratings between 9 and 10: 1.470
+MAE for ratings between 10 and 11: 1.690
+MAE : 1.239927474928286
+
+Evaluating KNNBaseline...
+Estimating biases using sgd...
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+MAE for ratings between 4 and 5: 2.772
+MAE for ratings between 5 and 6: 1.482
+MAE for ratings between 6 and 7: 1.127
+MAE for ratings between 7 and 8: 0.658
+MAE for ratings between 8 and 9: 0.717
+MAE for ratings between 9 and 10: 1.728
+MAE for ratings between 10 and 11: 1.998
+MAE : 1.3403619165077032
+
+Item Based :
+
+Evaluating KNNBasic...
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+MAE for ratings between 4 and 5: 2.760
+MAE for ratings between 5 and 6: 1.406
+MAE for ratings between 6 and 7: 1.133
+MAE for ratings between 7 and 8: 0.641
+MAE for ratings between 8 and 9: 0.722
+MAE for ratings between 9 and 10: 1.767
+MAE for ratings between 10 and 11: 2.049
+MAE : 1.3522899188108861
+
+Evaluating KNNWithMeans...
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+MAE for ratings between 4 and 5: 2.412
+MAE for ratings between 5 and 6: 1.251
+MAE for ratings between 6 and 7: 1.031
+MAE for ratings between 7 and 8: 0.707
+MAE for ratings between 8 and 9: 0.752
+MAE for ratings between 9 and 10: 1.500
+MAE for ratings between 10 and 11: 1.725
+MAE : 1.2280006243822845
+
+Evaluating KNNWithZScore...
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+MAE for ratings between 4 and 5: 2.409
+MAE for ratings between 5 and 6: 1.255
+MAE for ratings between 6 and 7: 1.038
+MAE for ratings between 7 and 8: 0.715
+MAE for ratings between 8 and 9: 0.755
+MAE for ratings between 9 and 10: 1.492
+MAE for ratings between 10 and 11: 1.718
+MAE : 1.2289882449467568
+
+Evaluating KNNBaseline...
+Estimating biases using sgd...
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+MAE for ratings between 4 and 5: 2.743
+MAE for ratings between 5 and 6: 1.393
+MAE for ratings between 6 and 7: 1.121
+MAE for ratings between 7 and 8: 0.636
+MAE for ratings between 8 and 9: 0.716
+MAE for ratings between 9 and 10: 1.751
+MAE for ratings between 10 and 11: 2.030
+MAE : 1.340562752341235
