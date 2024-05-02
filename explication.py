@@ -5,7 +5,7 @@ import surprise
 import os
 from surprise import Dataset, Reader, KNNWithZScore  # Importe les classes Dataset, Reader et KNNWithZScore depuis la bibliothèque surprise
 from collections import defaultdict       # Importe la classe defaultdict depuis la bibliothèque collections
-import openai
+from openai import OpenAI
 
 data = pd.read_csv("BDD/avis_sans_outliers.csv")
 
@@ -130,3 +130,26 @@ def get_top_comments_filtres(user, title, N, word_count_threshold):
         new_comments.append(c_new)
     
     return new_comments
+
+def explication_gpt(key, user, title, N, word_count_threshold):
+    client = OpenAI(
+    api_key=key
+    )
+    
+    comments= get_top_comments_filtres(user, title, N, word_count_threshold)
+
+
+    prompt = "Je veux recommander un jeu a un joueur, apres avoir fait tourné un algorithme, voici ce que ses k plus proches voisins ont commenté dessus (les commentaires ont été filtré par des techniques de NLP et chaque commentaire est de la forme (rang dans la liste des k plus proches voisins, auteur, commentaire)): "+ str(comments) +" Je veux que tu me génère une explication de la recommandation grace a ces commentaires."
+    print("Prompt : "+prompt)
+    chat_completion = client.chat.completions.create(
+        messages = [
+            {
+                "role":"user",
+            "content":prompt
+            },    
+        ],
+        model="gpt-3.5-turbo"
+    )
+
+    print(chat_completion.choices[0].message.content)
+    
