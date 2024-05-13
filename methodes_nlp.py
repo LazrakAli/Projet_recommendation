@@ -48,11 +48,13 @@ def tf_idf(comments_tuples, top_n=10):
     
     return top_keywords
 
-def lda(comments, num_topics=5, num_keywords=10):
+def lda(comments_tuples, num_topics=5, num_keywords=10):
+    # Extract preprocessed comments from tuples
+    processed_comments = [words for _, _, words in comments_tuples]
     
     # Create a dictionary and corpus
-    dictionary = corpora.Dictionary(comments)
-    corpus = [dictionary.doc2bow(comment) for comment in comments]
+    dictionary = corpora.Dictionary(processed_comments)
+    corpus = [dictionary.doc2bow(comment) for comment in processed_comments]
     
     # Train the LDA model
     lda_model = LdaModel(corpus, num_topics=num_topics, id2word=dictionary, passes=10)
@@ -60,6 +62,8 @@ def lda(comments, num_topics=5, num_keywords=10):
     # Extract keywords
     keywords = {}
     for i in range(num_topics):
-        keywords[f'Topic {i}'] = [word for word, _ in lda_model.show_topic(i, topn=num_keywords)]
+        # Extract and format topic keywords
+        topic_keywords = lda_model.show_topic(i, topn=num_keywords)
+        keywords[f'Topic {i}'] = [word for word, _ in topic_keywords]
     
     return keywords
