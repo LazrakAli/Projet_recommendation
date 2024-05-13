@@ -1,8 +1,14 @@
+import pandas as pd
+import spacy
+import nltk
+from nltk.corpus import stopwords
+from surprise import Dataset, Reader, KNNWithZScore
+
+# Ensure all necessary components are downloaded
+nltk.download('stopwords')
+nltk.download('punkt')
 class RecommendationSystem:
     def __init__(self, data_path):
-        import pandas as pd
-        import spacy
-        from surprise import Dataset, Reader, KNNWithZScore
         
         # Load language model for French
         self.nlp = spacy.load('fr_core_news_sm')
@@ -10,6 +16,7 @@ class RecommendationSystem:
         self.data = pd.read_csv(data_path)
         self.algo = None
         self.trainset = None
+        self.stopwords = set(stopwords.words('french'))
         self.prepare_data()
 
     def prepare_data(self):
@@ -18,6 +25,8 @@ class RecommendationSystem:
         """
         import pandas as pd
         from surprise import Dataset, Reader
+        self.data = self.data.drop(columns='Unnamed: 0')
+        self.data['comment'] = self.data['comment'].fillna('')
         reader = Reader(rating_scale=(1, 10))
         data_surprise = Dataset.load_from_df(self.data[['author', 'title', 'note']], reader)
         self.trainset = data_surprise.build_full_trainset()
@@ -113,6 +122,26 @@ class RecommendationSystem:
         """
         doc = self.nlp(commentaire)
         return [token.text for token in doc]
+    
+    
+    def preprocess_french_text(self,text):
+        """
+        Preprocess French text by tokenizing, lowercasing, removing stopwords and punctuation, and lemmatizing.
+        
+        :param text: The input French text as a string
+        :return: A list of preprocessed tokens
+        """
+        # Tokenize the text
+        tokens = nltk.word_tokenize(text, language='french')
+        
+        # Convert to lowercase and remove punctuation and stopwords
+        tokens = [token.lower() for token in tokens if token.isalpha() and token.lower() not in self.stopwords]
+        
+        # Lemmatize tokens
+        doc = self.nlp(' '.join(tokens))
+        lemmatized_tokens = [token.lemma_ for token in doc]
+        
+        return lemmatized_tokens
 
     def get_top_comments_filtres(self, user, title, N, word_count_threshold):
         """
@@ -124,7 +153,8 @@ class RecommendationSystem:
         for c in comments:
             c_new = list(c)
             c_new[2] = self.filtrer_commentaire(c_new[2])
-            c_new[2] = self.tokeniser(c_new[2])
+            #c_new[2] = self.tokeniser(c_new[2])
+            c_new[2] = self.preprocess_french_text(c_new[2])
             new_comments.append(c_new)
         
         return new_comments
@@ -144,8 +174,3 @@ class RecommendationSystem:
         )
         
         return chat_completion.choices[0].message.content
-
-
-# recommender = RecommendationSystem("BDD/avis_sans_outliers.csv")
-# recommender.train_algorithm()
-# explanation = recommender.explication_gpt("api_key", "user123", "Some Game", 5, 4)
