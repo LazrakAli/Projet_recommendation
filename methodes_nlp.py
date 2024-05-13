@@ -4,6 +4,7 @@ from gensim import corpora
 from gensim.models import LdaModel
 from summa import keywords
 import yake
+from rake_nltk import Rake
 
 def baseline(comments_tuples, top_n=10):
         """
@@ -112,5 +113,28 @@ def yake_extractor(comments_tuples, num_keywords=10, deduplication_threshold=0.9
         keywords = extractor.extract_keywords(comment_text)
         # Store keywords, optionally could use index or any other identifier for each comment
         keywords_per_comment[index] = [kw[0] for kw in keywords]
+
+    return keywords_per_comment
+
+def rake_extractor(comments_tuples, num_keywords=10):
+    """
+    Extract key phrases from a list of tokenized comments using the RAKE algorithm.
+
+    :param comments_tuples: List of tuples, where each tuple contains identifiers and a list of tokens from a comment.
+    :param num_keywords: Number of key phrases to extract from each comment.
+    :return: Dictionary of comments and their corresponding list of key phrases.
+    """
+    rake_object = Rake(max_length=3)
+
+    processed_comments = [words for _, _, words in comments_tuples]
+    keywords_per_comment = {}
+    for index, tokens in enumerate(processed_comments):
+        # Join tokens into a single string
+        comment_text = ' '.join(tokens)
+        # Extract key phrases
+        rake_object.extract_keywords_from_text(comment_text)
+        keywords = rake_object.get_ranked_phrases_with_scores()[:num_keywords]
+        # Store key phrases, optionally could use index or any other identifier for each comment
+        keywords_per_comment[index] = [kw[1] for kw in keywords]
 
     return keywords_per_comment
