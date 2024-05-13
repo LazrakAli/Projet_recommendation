@@ -18,8 +18,6 @@ class RecommendationSystem:
         """
         import pandas as pd
         from surprise import Dataset, Reader
-        self.data = self.data.drop(columns=['Unnamed: 0', 'url', 'title_review', 'date_published'])
-        self.data['comment'] = self.data['comment'].fillna('')  # Fill missing comments
         reader = Reader(rating_scale=(1, 10))
         data_surprise = Dataset.load_from_df(self.data[['author', 'title', 'note']], reader)
         self.trainset = data_surprise.build_full_trainset()
