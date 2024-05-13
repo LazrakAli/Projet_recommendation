@@ -3,6 +3,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from gensim import corpora
 from gensim.models import LdaModel
 from summa import keywords
+import yake
 
 def baseline(comments_tuples, top_n=10):
         """
@@ -82,3 +83,34 @@ def textrank(comments_tuples, ratio=0.2):
     text = ' '.join(comments)
     
     return keywords.keywords(text, ratio=ratio)
+
+def yake_extractor(comments_tuples, num_keywords=10, deduplication_threshold=0.9, n_gram_size=3):
+    """
+    Extract keywords from a list of tokenized comments using the YAKE algorithm.
+
+    :param comments_tuples: List of lists, where each inner list is a list of tokens from a comment.
+    :param num_keywords: Number of keywords to extract.
+    :param deduplication_threshold: Threshold to use for deduplication; the lower, the more aggressive.
+    :param n_gram_size: The maximum length of multi-word keywords (n-grams).
+    :return: Dictionary of comments and their corresponding list of keywords.
+    """
+    # Initialize YAKE keyword extractor
+    language = "fr"  # Assuming the language is English
+    max_ngram_size = n_gram_size
+    deduplication_thresold = deduplication_threshold
+    num_of_keywords = num_keywords
+    processed_comments = [words for _, _, words in comments_tuples]
+    
+    extractor = yake.KeywordExtractor(lan=language, n=max_ngram_size, dedupLim=deduplication_thresold, top=num_of_keywords, features=None)
+
+    # Process each tokenized comment
+    keywords_per_comment = {}
+    for index, tokens in enumerate(processed_comments):
+        # Join tokens into a single string
+        comment_text = ' '.join(tokens)
+        # Extract keywords
+        keywords = extractor.extract_keywords(comment_text)
+        # Store keywords, optionally could use index or any other identifier for each comment
+        keywords_per_comment[index] = [kw[0] for kw in keywords]
+
+    return keywords_per_comment
