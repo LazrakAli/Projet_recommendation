@@ -2,6 +2,7 @@ from collections import Counter
 from sklearn.feature_extraction.text import TfidfVectorizer
 from gensim import corpora
 from gensim.models import LdaModel
+from summa import keywords
 
 def baseline(comments_tuples, top_n=10):
         """
@@ -67,3 +68,17 @@ def lda(comments_tuples, num_topics=5, num_keywords=10):
         keywords[f'Topic {i}'] = [word for word, _ in topic_keywords]
     
     return keywords
+
+def textrank(comments_tuples, ratio=0.2):
+    """
+    Extract keywords from a list of comments using TextRank algorithm via the summa library.
+
+    :param comments: List of strings, where each string is a comment.
+    :param ratio: Float, controls the fraction of text to output as keywords.
+    :return: A string containing the extracted keywords.
+    """
+    # Join all comments into a single text
+    comments = [' '.join(words) for _, _, words in comments_tuples]
+    text = ' '.join(comments)
+    
+    return keywords.keywords(text, ratio=ratio)
