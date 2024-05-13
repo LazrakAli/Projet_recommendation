@@ -5,6 +5,8 @@ from gensim.models import LdaModel
 from summa import keywords
 import yake
 from rake_nltk import Rake
+from keybert import KeyBERT
+from sentence_transformers import SentenceTransformer
 
 def baseline(comments_tuples, top_n=10):
         """
@@ -136,5 +138,32 @@ def rake_extractor(comments_tuples, num_keywords=10):
         keywords = rake_object.get_ranked_phrases_with_scores()[:num_keywords]
         # Store key phrases, optionally could use index or any other identifier for each comment
         keywords_per_comment[index] = [kw[1] for kw in keywords]
+
+    return keywords_per_comment
+
+def keybert_extractor(comments_tuples, num_keywords=5):
+    """
+    Extract keywords from a list of tokenized French comments using the KeyBERT algorithm.
+
+    :param comments_tuples: List of lists, where each inner list is a list of tokens from a comment.
+    :param num_keywords: Number of keywords to extract from each comment.
+    :return: Dictionary of comments and their corresponding list of keywords.
+    """
+    # Load a French language model from sentence transformers
+    model = SentenceTransformer('distiluse-base-multilingual-cased')
+    
+    # Initialize KeyBERT with the specified model
+    kw_model = KeyBERT(model=model)
+
+    # Process each tokenized comment
+    keywords_per_comment = {}
+    processed_comments = [words for _, _, words in comments_tuples]
+    for index, tokens in enumerate(processed_comments):
+        # Join tokens into a single string
+        comment_text = ' '.join(tokens)
+        # Extract keywords
+        keywords = kw_model.extract_keywords(comment_text, keyphrase_ngram_range=(1, 2), stop_words='french', top_n=num_keywords)
+        # Store keywords, optionally could use index or any other identifier for each comment
+        keywords_per_comment[index] = [kw[0] for kw in keywords]
 
     return keywords_per_comment
