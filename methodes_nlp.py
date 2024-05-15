@@ -167,3 +167,31 @@ def keybert_extractor(comments_tuples, num_keywords=5):
         keywords_per_comment[index] = [kw[0] for kw in keywords]
 
     return keywords_per_comment
+
+def keyword_appearance_rate(comment, keywords):
+    """Calcul le taux d'apparition des mots-clés dans un commentaire.
+    
+    Args:
+        comment (str): Le commentaire à analyser.
+        keywords (list): La liste des mots-clés à chercher dans le commentaire.
+
+    Returns:
+        float: Le taux d'apparition des mots-clés dans le commentaire.
+    """
+    # Transformer le commentaire en un ensemble de mots
+    comment_words = set(comment.lower().split())
+    # Transformer la liste des mots-clés également en ensemble pour éviter les doublons
+    keywords_set = set(keywords)
+    
+    # Calculer le nombre total de mots-clés uniques
+    total_keywords = len(keywords_set)
+    
+    # Éviter la division par zéro si la liste des mots-clés est vide
+    if total_keywords == 0:
+        return 0
+    
+    # Compter combien de mots-clés se trouvent dans le commentaire
+    found_keywords = len(keywords_set.intersection(comment_words))
+    
+    # Calculer et retourner le taux d'apparition
+    return found_keywords / total_keywords
